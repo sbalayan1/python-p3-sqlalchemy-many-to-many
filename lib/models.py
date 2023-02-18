@@ -46,7 +46,6 @@ class User(Base):
     games = relationship('Game', secondary=game_user, back_populates='users')
     reviews = relationship('Review', backref='user')
 
-
     def __repr__(self):
         return f'User(id={self.id}, name={self.name})'
 
